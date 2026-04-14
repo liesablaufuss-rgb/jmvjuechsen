@@ -54,6 +54,11 @@ body {
 .members {
     width: 100%;
     max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    margin-top: 20px;
 }
 
 .music-notes {
@@ -72,6 +77,7 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
+
 
 h2 {
     color: var(--dark-blue);
@@ -118,24 +124,29 @@ h2 {
 
 .teacher-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns:  repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center; /* Zentriert das gesamte Grid horizontal */
     margin-top: 30px;
+    margin: 0 auto;
 }
 
 .teacher-card {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    text-align: left;
+    flex-direction: column;
+    align-items: center;    /* Zentriert Bild und Text innerhalb der Karte */
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9; /* Nur als Beispiel für die Sichtbarkeit */
+    border-radius: 8px;
 }
 
 .profile-placeholder {
-    width: 100px;
-    height: 100px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;     /* Macht den Platzhalter rund */
+    margin-bottom: 10px;
 }
 
 .cta-section {
