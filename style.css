@@ -21,22 +21,23 @@ html, body {
 
 .header {
     background-color: var(--light-blue);
-    padding: 60px 0;
+    padding: 40px 2rem;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
-    min-height: 180px;
     display: flex;
-    align-items: center;
+    justify-content: center;
     justify-content: space-between;
 }
 
 .header-content {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 60px 5vw;
+    padding: 0 5vw;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
     gap: 40px;
 }
 
@@ -57,7 +58,7 @@ html, body {
     right: 5%;
     top: 50%;
     transform: none;
-    max-height: 200px;
+    max-height: 250px;
     width: auto;
 }
 
