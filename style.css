@@ -47,35 +47,41 @@ body {
 }
 
 .content-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: none;
+    width: 100%;
+    padding: 0 5vw;
 }
 
 .text-block {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0 ;
+    padding: 0;
     text-align: justify;
     hyphens: auto;
     line-height: 1.8;
-    padding: 0 20px;
 }
 
 .members {
     float: right;      /* oder: left */
-    margin: 0 0 10px 10px; /* Abstand zum Text */
-    width: 328px;
+    margin: 0 0 15px 25px;
+    width: 316px;
     height: auto;
 }
 
 .text-block p {  
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: none;
+    margin: 0 ;
     text-align: justify;
     hyphens: auto;
     line-height: 1.8;
-    padding: 0 20px;
+    padding: 0;
 
+}
+
+.text-block::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .section {
@@ -109,6 +115,7 @@ h2 {
     color: var(--dark-blue);
     text-align: center;
     font-size: 1.6rem;
+    width: auto;
 }
 
 .offer-box p {
@@ -221,11 +228,11 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .members-right {
+    .members {
         float: none;
         display: block;
         margin: 20px auto;
-        max-width: 80%;
+        max-width: 90%;
     }
 }
 
