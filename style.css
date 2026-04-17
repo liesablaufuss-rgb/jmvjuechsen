@@ -22,25 +22,26 @@ body {
     min-height: 180px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header h1 {
     color: var(--dark-blue);
-    font-size: 2.8rem;
+    font-size: 3.8rem;
     margin: 0;
 }
 
 .tagline {
     font-style: italic;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .logo-top {
-    position: absolute;
+    position: static;
     right: 5%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: none;
     max-height: 200px;
     width: auto;
 }
@@ -49,43 +50,6 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.members {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    margin-top: 20px;
-}
-
-.music-notes {
-    width: 100%;
-    max-width: 500px;   /* gewünschte Breite */
-    height: auto;    
-}
-
-.divider {
-    width: 100%;
-    text-align: center;
-    margin: 40px 0;
-}
-
-.section {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-
-h2 {
-    color: var(--dark-blue);
-    font-size: 2rem;
-    border-bottom: 1px solid var(--light-blue);
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 
 .text-block {
@@ -97,13 +61,43 @@ h2 {
     padding: 0 20px;
 }
 
+.members {
+    float: right;      /* oder: left */
+    margin: 0 0 10px 10px; /* Abstand zum Text */
+    width: 328px;
+    height: auto;
+}
+
+.text-block p {  
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.8;
+    padding: 0 20px;
+
+}
+
+.section {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--dark-blue);
+    font-size: 2rem;
+    border-bottom: 1px solid var(--light-blue);
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
 .offer-box {
     background-color: var(--light-blue);
     padding: 30px 40px;
-    /* Rundung: oben-links, oben-rechts, unten-rechts, unten-links */
     border-radius: 50px 0 0 50px; 
     width: 75%;
-    margin: 30px 0 30px auto;
+    margin: 40px 0 100px auto;
     text-align: justify;
     hyphens: auto;
     box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
@@ -152,7 +146,8 @@ h2 {
 .cta-section {
     text-align: center;
     padding: 30px 20px;
-    margin: 10px 0;
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 .cta-button {
@@ -215,10 +210,22 @@ h2 {
 .music-notes {
     width: 100%;
     max-width: 600px;
+    height: auto;
     opacity: 0.6;
 }
 
 .divider {
+    width: 100%;
     text-align: center;
     margin: 40px 0;
 }
+
+@media (max-width: 600px) {
+    .members-right {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        max-width: 80%;
+    }
+}
+
