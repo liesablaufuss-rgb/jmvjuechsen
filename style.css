@@ -15,7 +15,7 @@ body {
 
 .header {
     background-color: var(--light-blue);
-    padding: 60px 10%;
+    padding: 60px 0;
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -23,6 +23,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5vw;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .header h1 {
@@ -172,6 +181,7 @@ h2 {
 
 .footer {
     background-color: var(--light-blue);
+    width: 100%;
     padding: 50px 20px;
     text-align: center;
     margin-top: 0;
@@ -180,8 +190,10 @@ h2 {
 
 .footer-contact {
     margin-bottom: 25px;
-    font-size: 1.1rem;
-    color: var(--dark-blue);
+}
+
+.contact {
+    width: 550px;
 }
 
 
