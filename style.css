@@ -498,9 +498,9 @@ details p {
         grid-template-rows: auto;
     }
 
-        .auftritt-klein img {
+    .auftritt-klein img {
         width: 100%;
-        height: 180px;
+        height: 100%;
         object-fit: cover;
         object-position: center;
         display: block;
@@ -511,7 +511,7 @@ details p {
     .auftritt-hoch {
         grid-column: 1;
         grid-row: 1 / span 2;
-        max-height: 374px;
+        max-height: 100%;
         overflow: hidden;
     }
 
