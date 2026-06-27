@@ -72,6 +72,8 @@ html, body {
 .section {
     margin-bottom: 80px;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 h2 {
@@ -159,6 +161,9 @@ details p {
     font-style: italic;
 }
 
+/* ============================
+   DIVIDER / NOTEN
+   ============================ */
 .divider {
     width: 100vw;
     position: relative;
@@ -179,6 +184,12 @@ details p {
 /* ============================
    ANGEBOT BOX
    ============================ */
+#angebot {
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+}
+
 .offer-box {
     background-color: var(--light-blue);
     padding: 30px 40px;
@@ -347,6 +358,8 @@ details p {
     padding: 30px 20px;
     margin-top: 60px;
     margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
 }
 
 .cta-section h3 {
@@ -384,6 +397,9 @@ details p {
     text-align: center;
     line-height: 1.8;
     box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    margin-top: -100px;
 }
 
 .footer-contact {
@@ -494,7 +510,6 @@ details p {
         font-size: 1.6rem;
     }
 
-    /* History: 2 Spalten auf Mobil */
     .history-photos {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -514,11 +529,16 @@ details p {
         font-size: 1.3rem;
     }
 
-     #angebot {
+    #angebot {
         margin-top: -20px;
     }
-    
-    /* Auftritt: 1 Spalte */
+
+    .music-notes {
+        height: 80px;
+        object-fit: cover;
+        object-position: center;
+    }
+
     .auftritt-gallery {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -551,7 +571,6 @@ details p {
         transition: transform 0.3s ease;
     }
 
-    /* Mitmachen: untereinander */
     .mitmachen-layout {
         grid-template-columns: 1fr;
     }
@@ -630,28 +649,57 @@ details p {
         width: 70px;
         height: 70px;
     }
-
-    .profile-photo {
-        width: 200px;          /* Gewünschte Breite */
-        height: 200px;         /* Dieselbe Höhe für ein perfektes Quadrat */
-        border-radius: 50%;    /* Macht die Ecken rund */
-        object-fit: cover;
-    }
 }
 
-.cta-section {
-    position: relative;
-    z-index: 2;
+/* ============================
+   LEGAL PAGES (Impressum / Datenschutz)
+   ============================ */
+.legal-section {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 80px;
 }
 
-#angebot {
-    margin-top: -100px;
-    position: relative;
-    z-index: 2;
+.legal-content h3 {
+    color: var(--dark-blue);
+    font-size: 1.3rem;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--light-blue);
+    padding-bottom: 6px;
 }
 
-.footer {
-    position: relative;
-    z-index: 2;
-    margin-top: -100px;
+.legal-content h4 {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+.legal-content p {
+    line-height: 1.8;
+    margin-bottom: 14px;
+    hyphens: auto;
+}
+
+.legal-source {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.back-link {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--light-blue);
+}
+
+.back-link a {
+    color: var(--dark-blue);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
 }
