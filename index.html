@@ -9,6 +9,19 @@
 </head>
 <body>
 
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div id="side-menu" class="side-menu">
+        <!-- Schließen-Button -->
+        <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+        <!-- Die Navigationslinks -->
+        <a href="index.html">Startseite</a>
+        <a href="#verein" onclick="toggleMenu()">Unser Verein</a>
+        <a href="#angebot" onclick="toggleMenu()">Angebot</a>
+        <a href="#mitmachen" onclick="toggleMenu()">Werde Mitglied</a>
+        <a href="#lehrer" onclick="toggleMenu()">Unsere Lehrer</a>
+        <a href="neuigkeiten.html">Termine</a>
+    </div>
+
     <header class="header">
         <div class="header-content">
             <div>
@@ -157,8 +170,8 @@
 
     </main>
 
-     <div class="divider">
-            <img src="bilder/noten2.png" alt="" class="music-notes">
+    <div class="divider">
+        <img src="bilder/noten2.png" alt="" class="music-notes">
     </div>
 
     <footer class="footer">
@@ -196,6 +209,19 @@
             <a href="datenschutz.html">Datenschutzerklärung</a>
         </div>
     </footer>
+
+
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById("side-menu");
+        if (menu.style.width === "250px") {
+                menu.style.width = "0";
+            } else {
+                menu.style.width = "250px";
+            }
+    }
+    </script>
+
 
 </body>
 </html>
